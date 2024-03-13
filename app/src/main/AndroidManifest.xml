@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MobileCourseUnnLab3"
         tools:targetApi="31">
         <activity
-            android:name=".EmptyViewsActivity"
+            android:name=".SampleDialogActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +22,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.MobileCourseUnnLab3">
+            android:name=".AnimationActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

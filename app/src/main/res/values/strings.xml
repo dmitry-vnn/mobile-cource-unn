@@ -3,4 +3,12 @@
     <!-- Strings used for fragments for navigation -->
     <string name="counter_prompt">0</string>
     <string name="click_button_name">+</string>
+    <string name="spinner_prompt">Выберите президента</string>
+
+    <string-array name="presidents_array">
+        <item>Путин</item>
+        <item>Даванков</item>
+        <item>Слуцкий</item>
+        <item>Харитонов</item>
+    </string-array>
 </resources>

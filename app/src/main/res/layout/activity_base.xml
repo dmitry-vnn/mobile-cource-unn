@@ -5,51 +5,102 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BaseActivity">
+    tools:context=".BaseActivity" >
 
-    <Button
-        android:id="@+id/button_plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        android:textSize="24sp"
-        android:onClick="onPlusButtonClick"
-        app:layout_constraintBottom_toBottomOf="@+id/button_reset"
-        app:layout_constraintEnd_toStartOf="@+id/button_reset"
-        app:layout_constraintStart_toStartOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="108dp"
-        android:text="0"
-        android:textSize="24sp"
-        android:onClick="onResetButtonClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:columnCount="1">
 
-    <Button
-        android:id="@+id/button_minus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:textSize="24sp"
-        android:onClick="onMinusButtonClick"
-        app:layout_constraintBottom_toBottomOf="@+id/button_reset"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_reset" />
 
-    <TextView
-        android:id="@+id/text_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="338dp"
-        android:text="0"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_seek_bar"
+                android:name="dmitry.mobilecourseunnlab3.fragments.SeekBarFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_gravity="center_horizontal"
+                tools:layout="@layout/fragment_seek_bar" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@android:color/darker_gray"/>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_switcher"
+                android:name="dmitry.mobilecourseunnlab3.fragments.SwitcherFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_gravity="center_horizontal"
+                tools:layout="@layout/fragment_switcher" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@android:color/darker_gray"/>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_spinner"
+                android:name="dmitry.mobilecourseunnlab3.fragments.SpinnerFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_gravity="center_horizontal"
+                tools:layout="@layout/fragment_spinner" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@android:color/darker_gray"/>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_button_date_picker"
+                android:name="dmitry.mobilecourseunnlab3.fragments.ButtonDateAndTimePickerFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_gravity="center_horizontal"
+                tools:layout="@layout/fragment_button_date_and_time_picker" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@android:color/darker_gray"/>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_button_clicker"
+                android:name="dmitry.mobilecourseunnlab3.fragments.ButtonCounterFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_gravity="center_horizontal"
+                tools:layout="@layout/fragment_button_clicker" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@android:color/darker_gray"/>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_button_hold"
+                android:name="dmitry.mobilecourseunnlab3.fragments.ButtonHoldFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_gravity="center_horizontal"
+                tools:layout="@layout/fragment_button_hold" />
+
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

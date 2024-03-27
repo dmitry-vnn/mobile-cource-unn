@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SquaresActivity" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:columnCount="1">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_three_squares"
+                android:name="dmitry.mobilecourseunnlab3.fragments.ThreeSquaresFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_gravity="center_horizontal"
+                tools:layout="@layout/fragment_three_squares" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_squares_grid"
+                android:name="dmitry.mobilecourseunnlab3.fragments.SquaresGridFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:layout_gravity="center_horizontal"
+                tools:layout="@layout/fragment_squares_grid" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_square_transform"
+                android:name="dmitry.mobilecourseunnlab3.fragments.SquareTransformFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:layout_gravity="center_horizontal"
+                tools:layout="@layout/fragment_square_transform" />
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

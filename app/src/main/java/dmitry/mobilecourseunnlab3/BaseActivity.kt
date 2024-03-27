@@ -3,18 +3,18 @@ package dmitry.mobilecourseunnlab3
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import dmitry.mobilecourseunnlab3.databinding.ActivityClickerBinding
+import dmitry.mobilecourseunnlab3.databinding.ActivityBaseBinding
 
-class ClickerActivity : AppCompatActivity() {
+class BaseActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityClickerBinding
+    private lateinit var binding: ActivityBaseBinding
 
     private var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityClickerBinding.inflate(layoutInflater)
+        binding = ActivityBaseBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
     }

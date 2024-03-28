@@ -16,6 +16,20 @@
             android:layout_height="wrap_content"
             app:columnCount="1">
 
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_number_input"
+                android:name="dmitry.mobilecourseunnlab3.fragments.InputNumberFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_gravity="center_horizontal"
+                tools:layout="@layout/fragment_number_input" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@android:color/darker_gray"/>
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_seek_bar"

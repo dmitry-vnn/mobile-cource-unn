@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import dmitry.mobilecourseunnlab3.databinding.FragmentButtonHoldBinding
 import dmitry.mobilecourseunnlab3.databinding.FragmentNumberInputBinding
 
 class InputNumberFragment : Fragment() {
@@ -14,7 +13,7 @@ class InputNumberFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return FragmentNumberInputBinding.inflate(inflater, container, false).root;
+        return FragmentNumberInputBinding.inflate(inflater, container, false).root
     }
 
 

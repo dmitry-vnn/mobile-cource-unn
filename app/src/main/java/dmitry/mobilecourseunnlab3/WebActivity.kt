@@ -1,14 +1,18 @@
 package dmitry.mobilecourseunnlab3
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import dmitry.mobilecourseunnlab3.databinding.ActivityWebBinding
 
 class WebActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_web)
+
+        val binding = ActivityWebBinding.inflate(layoutInflater)
+
+        binding.webView.loadUrl("https://github.com")
+
+        setContentView(binding.root)
     }
 }

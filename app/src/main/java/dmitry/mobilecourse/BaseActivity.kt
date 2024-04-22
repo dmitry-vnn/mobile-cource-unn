@@ -1,9 +1,9 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourse
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import dmitry.mobilecourseunnlab3.databinding.ActivityBaseBinding
+import dmitry.mobilecourse.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
 

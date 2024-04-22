@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MobileCourseUnnLab3</string>
+    <string name="app_name">MobileCourse</string>
     <!-- Strings used for fragments for navigation -->
     <string name="counter_prompt">0</string>
     <string name="click_button_name">+</string>

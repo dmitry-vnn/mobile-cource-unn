@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MobileCourseUnnLab3"
+rootProject.name = "MobileCourse"
 include(":app")

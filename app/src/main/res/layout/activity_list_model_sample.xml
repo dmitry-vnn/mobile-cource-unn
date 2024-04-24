@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    tools:context=".first.ListModelSampleActivity">
+    tools:context=".rectangles.ListModelSampleActivity">
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/column"

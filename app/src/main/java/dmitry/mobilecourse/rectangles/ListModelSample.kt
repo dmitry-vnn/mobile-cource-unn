@@ -1,7 +1,7 @@
-package dmitry.mobilecourse.second
+package dmitry.mobilecourse.rectangles
 
 import android.app.ActionBar.LayoutParams
-import android.graphics.Color
+import android.graphics.Color.*
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
@@ -10,9 +10,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.ui.unit.dp
 import androidx.gridlayout.widget.GridLayout
-import dmitry.mobilecourse.databinding.ActivityInteractiveListModelBinding
+import dmitry.mobilecourse.databinding.ActivityListModelSampleBinding
 
-class InteractiveListModelActivity : AppCompatActivity(), RectangleListModel.Observer {
+class ListModelSampleActivity : AppCompatActivity(),
+    RectangleListModel.Observer {
 
     private lateinit var column: GridLayout
     private lateinit var rectangleListModel: RectangleListModel
@@ -20,15 +21,15 @@ class InteractiveListModelActivity : AppCompatActivity(), RectangleListModel.Obs
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = ActivityInteractiveListModelBinding.inflate(layoutInflater)
+        val binding = ActivityListModelSampleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         column = binding.column
         rectangleListModel = RectangleListModel(this)
-    }
 
-    fun onAddButtonClick(view: View) {
-        rectangleListModel.addRectangle(Rectangle())
+        rectangleListModel.addRectangle(Rectangle(CYAN, "CYAN"))
+        rectangleListModel.addRectangle(Rectangle(BLACK, "BLACK"))
+        rectangleListModel.addRectangle(Rectangle(RED, "RED"))
     }
 
     override fun onRectangleAdded(rectangle: Rectangle) {
@@ -37,28 +38,16 @@ class InteractiveListModelActivity : AppCompatActivity(), RectangleListModel.Obs
 
         val frameLayout = FrameLayout(this)
 
-        frameLayout.setPadding(0, 15.dp.value.toInt(), 0, 0)
+        frameLayout.setPadding(0, column.paddingLeft, 0, 0)
         frameLayout.addView(rectangleView)
         frameLayout.addView(textView)
-
-        frameLayout.setOnClickListener { rectangleListModel.removeRectangle(rectangle) }
-        frameLayout.tag = rectangle
 
         column.addView(frameLayout)
     }
 
-    override fun onRectangleRemoved(rectangle: Rectangle) {
-        for (i in 0..<column.childCount) {
-            if (column.getChildAt(i).tag == rectangle) {
-                column.removeViewAt(i)
-                return
-            }
-        }
-    }
-
     private fun createTextView(rectangle: Rectangle): TextView {
         val textView = TextView(this)
-        textView.text = "Элемент ${rectangle.id}"
+        textView.text = rectangle.text
 
         val textLayoutParams = FrameLayout.LayoutParams(
             FrameLayout.LayoutParams.WRAP_CONTENT,
@@ -72,7 +61,7 @@ class InteractiveListModelActivity : AppCompatActivity(), RectangleListModel.Obs
 
     private fun createRectangleView(rectangle: Rectangle): View {
         val rectangleView = View(this)
-        rectangleView.setBackgroundColor(Color.CYAN)
+        rectangleView.setBackgroundColor(rectangle.backgroundColor)
 
         val layoutParams = LayoutParams(0, 0)
         layoutParams.height = 250.dp.value.toInt()
@@ -82,7 +71,10 @@ class InteractiveListModelActivity : AppCompatActivity(), RectangleListModel.Obs
         return rectangleView
     }
 
+
 }
+
+class Rectangle(val backgroundColor: Int, val text: String)
 
 class RectangleListModel(
     private val observer: Observer
@@ -90,41 +82,13 @@ class RectangleListModel(
 
     interface Observer {
         fun onRectangleAdded(rectangle: Rectangle)
-        fun onRectangleRemoved(rectangle: Rectangle)
     }
 
-    private val rectangles = hashMapOf<Int, Rectangle>()
+    private val rectangles = mutableListOf<Rectangle>()
 
     fun addRectangle(rectangle: Rectangle) {
-        rectangles += rectangle.id to rectangle
+        rectangles += rectangle
         observer.onRectangleAdded(rectangle)
     }
 
-    fun removeRectangle(rectangle: Rectangle) {
-        rectangles -= rectangle.id
-        observer.onRectangleRemoved(rectangle)
-    }
-
-}
-
-class Rectangle {
-
-    val id: Int = idCounter++
-
-    private companion object {
-        var idCounter = 1
-    }
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as Rectangle
-
-        return id == other.id
-    }
-
-    override fun hashCode(): Int {
-        return id
-    }
 }

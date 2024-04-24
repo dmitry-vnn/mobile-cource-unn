@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    tools:context=".interactivelist.InteractiveListModelActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.gridlayout.widget.GridLayout
+
+            android:id="@+id/column"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:columnCount="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--        <androidx.fragment.app.FragmentContainerView-->
+            <!--            android:id="@+id/fragment_currency"-->
+            <!--            android:name="dmitry.mobilecourse.third.fragments.CurrencyFragment"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            app:layout_gravity="center_horizontal"-->
+            <!--            tools:layout="@layout/fragment_currency" />-->
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

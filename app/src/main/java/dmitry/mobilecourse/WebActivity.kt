@@ -1,8 +1,8 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourse
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import dmitry.mobilecourseunnlab3.databinding.ActivityWebBinding
+import dmitry.mobilecourse.databinding.ActivityWebBinding
 
 class WebActivity : AppCompatActivity() {
 

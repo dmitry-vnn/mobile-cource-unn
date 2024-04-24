@@ -1,16 +1,10 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourse
 
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.view.View
-import android.view.animation.AnimationUtils
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import dmitry.mobilecourseunnlab3.databinding.ActivityMenuBinding
+import dmitry.mobilecourse.databinding.ActivityMenuBinding
 
 class MenuActivity : AppCompatActivity() {
 

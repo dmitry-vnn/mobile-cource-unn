@@ -1,4 +1,4 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourse
 
 import android.Manifest
 import android.app.NotificationChannel

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "dmitry.mobilecourseunnlab3"
+    namespace = "dmitry.mobilecourse"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "dmitry.mobilecourseunnlab3"
+        applicationId = "dmitry.mobilecourse"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

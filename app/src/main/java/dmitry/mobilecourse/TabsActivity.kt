@@ -1,12 +1,12 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourse
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
-import dmitry.mobilecourseunnlab3.databinding.ActivityTabsBinding
-import dmitry.mobilecourseunnlab3.fragments.MainTabFragment
+import dmitry.mobilecourse.databinding.ActivityTabsBinding
+import dmitry.mobilecourse.fragments.MainTabFragment
 
 class TabsActivity : AppCompatActivity() {
 

@@ -1,12 +1,12 @@
-package dmitry.mobilecourseunnlab3.fragments
+package dmitry.mobilecourse.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import dmitry.mobilecourseunnlab3.databinding.FragmentTextDialogSelectorBinding
-import dmitry.mobilecourseunnlab3.dialogs.InputTextDialog
+import dmitry.mobilecourse.databinding.FragmentTextDialogSelectorBinding
+import dmitry.mobilecourse.dialogs.InputTextDialog
 
 class TextDialogSelectorFragment : Fragment() {
 

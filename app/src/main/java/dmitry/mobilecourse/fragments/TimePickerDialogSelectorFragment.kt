@@ -1,19 +1,15 @@
-package dmitry.mobilecourseunnlab3.fragments
+package dmitry.mobilecourse.fragments
 
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.DatePicker
 import android.widget.TimePicker
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
-import dmitry.mobilecourseunnlab3.databinding.FragmentDatePickerDialogSelectorBinding
-import dmitry.mobilecourseunnlab3.databinding.FragmentTimePickerDialogSelectorBinding
-import dmitry.mobilecourseunnlab3.dialogs.CustomDatePickerDialog
-import dmitry.mobilecourseunnlab3.dialogs.CustomTimePickerDialog
-import java.time.LocalDate
+import dmitry.mobilecourse.databinding.FragmentTimePickerDialogSelectorBinding
+import dmitry.mobilecourse.dialogs.CustomTimePickerDialog
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 

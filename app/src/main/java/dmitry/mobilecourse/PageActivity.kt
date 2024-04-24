@@ -1,10 +1,10 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourse
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import dmitry.mobilecourseunnlab3.databinding.ActivityPageBinding
+import dmitry.mobilecourse.databinding.ActivityPageBinding
 
 
 class PageActivity : AppCompatActivity() {

@@ -1,10 +1,10 @@
-package dmitry.mobilecourseunnlab3.dialogs
+package dmitry.mobilecourse.dialogs
 
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
-import dmitry.mobilecourseunnlab3.databinding.DialogInputTextBinding
+import dmitry.mobilecourse.databinding.DialogInputTextBinding
 
 class InputTextDialog(private val acceptReceiver: (String) -> Unit) : DialogFragment() {
 

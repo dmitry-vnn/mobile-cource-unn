@@ -1,12 +1,10 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourse
 
 import android.os.Bundle
-import android.view.ContextMenu
-import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import dmitry.mobilecourseunnlab3.databinding.ActivityTestingBinding
+import dmitry.mobilecourse.databinding.ActivityTestingBinding
 
 class TestingActivity : AppCompatActivity() {
 

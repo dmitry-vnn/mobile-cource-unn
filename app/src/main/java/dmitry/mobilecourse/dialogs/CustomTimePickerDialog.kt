@@ -1,4 +1,4 @@
-package dmitry.mobilecourseunnlab3.dialogs
+package dmitry.mobilecourse.dialogs
 
 import android.app.Dialog
 import android.app.TimePickerDialog

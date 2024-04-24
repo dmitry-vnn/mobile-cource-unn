@@ -1,12 +1,12 @@
-package dmitry.mobilecourseunnlab3.fragments
+package dmitry.mobilecourse.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import dmitry.mobilecourseunnlab3.TabsActivity
-import dmitry.mobilecourseunnlab3.databinding.FragmentMainTabBinding
+import dmitry.mobilecourse.TabsActivity
+import dmitry.mobilecourse.databinding.FragmentMainTabBinding
 
 class MainTabFragment(private val adapter: TabsActivity.ViewPagerStateAdapter) : Fragment() {
 

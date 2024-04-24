@@ -1,4 +1,4 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourse
 
 import android.content.Context
 import android.os.Build
@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import dmitry.mobilecourseunnlab3.databinding.ActivityWeeklyTasksBinding
+import dmitry.mobilecourse.databinding.ActivityWeeklyTasksBinding
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 

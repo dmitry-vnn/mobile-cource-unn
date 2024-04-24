@@ -1,11 +1,11 @@
-package dmitry.mobilecourseunnlab3.fragments
+package dmitry.mobilecourse.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import dmitry.mobilecourseunnlab3.R
+import dmitry.mobilecourse.R
 
 class BaseFragment : Fragment() {
 

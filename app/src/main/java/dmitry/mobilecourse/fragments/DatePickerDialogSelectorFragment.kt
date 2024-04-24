@@ -1,4 +1,4 @@
-package dmitry.mobilecourseunnlab3.fragments
+package dmitry.mobilecourse.fragments
 
 import android.os.Build
 import android.os.Bundle
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.DatePicker
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
-import dmitry.mobilecourseunnlab3.databinding.FragmentDatePickerDialogSelectorBinding
-import dmitry.mobilecourseunnlab3.dialogs.CustomDatePickerDialog
+import dmitry.mobilecourse.databinding.FragmentDatePickerDialogSelectorBinding
+import dmitry.mobilecourse.dialogs.CustomDatePickerDialog
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 

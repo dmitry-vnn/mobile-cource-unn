@@ -21,7 +21,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_text_dialog_selector"
-                android:name="dmitry.mobilecourseunnlab3.fragments.TextDialogSelectorFragment"
+                android:name="dmitry.mobilecourse.fragments.TextDialogSelectorFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_gravity="center_horizontal"
@@ -29,7 +29,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_date_picker_dialog_selector"
-                android:name="dmitry.mobilecourseunnlab3.fragments.DatePickerDialogSelectorFragment"
+                android:name="dmitry.mobilecourse.fragments.DatePickerDialogSelectorFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -38,7 +38,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_time_picker_dialog_selector"
-                android:name="dmitry.mobilecourseunnlab3.fragments.TimePickerDialogSelectorFragment"
+                android:name="dmitry.mobilecourse.fragments.TimePickerDialogSelectorFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"

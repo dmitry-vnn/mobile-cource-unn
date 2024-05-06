@@ -1,4 +1,4 @@
-package dmitry.mobilecourseunnlab3.fragments
+package dmitry.mobilecourseunn.fragments
 
 import android.app.AlertDialog
 import android.app.Dialog
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.EditText
 import androidx.fragment.app.DialogFragment
-import dmitry.mobilecourseunnlab3.R
+import dmitry.mobilecourseunn.R
 
 class CalculatorDialogFragment : DialogFragment() {
 

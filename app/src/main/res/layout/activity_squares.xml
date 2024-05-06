@@ -18,7 +18,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_three_squares"
-                android:name="dmitry.mobilecourseunnlab3.fragments.ThreeSquaresFragment"
+                android:name="dmitry.mobilecourseunn.fragments.ThreeSquaresFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_gravity="center_horizontal"
@@ -26,7 +26,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_squares_grid"
-                android:name="dmitry.mobilecourseunnlab3.fragments.SquaresGridFragment"
+                android:name="dmitry.mobilecourseunn.fragments.SquaresGridFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -35,7 +35,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_square_transform"
-                android:name="dmitry.mobilecourseunnlab3.fragments.SquareTransformFragment"
+                android:name="dmitry.mobilecourseunn.fragments.SquareTransformFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"

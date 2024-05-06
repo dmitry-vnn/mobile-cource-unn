@@ -1,4 +1,4 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourseunn
 
 import android.os.Bundle
 import android.view.View

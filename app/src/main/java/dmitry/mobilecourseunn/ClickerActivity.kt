@@ -1,9 +1,9 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourseunn
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import dmitry.mobilecourseunnlab3.databinding.ActivityClickerBinding
+import dmitry.mobilecourseunn.databinding.ActivityClickerBinding
 
 class ClickerActivity : AppCompatActivity() {
 

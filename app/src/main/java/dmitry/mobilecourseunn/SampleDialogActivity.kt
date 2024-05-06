@@ -1,9 +1,9 @@
-package dmitry.mobilecourseunnlab3
+package dmitry.mobilecourseunn
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import dmitry.mobilecourseunnlab3.fragments.CalculatorDialogFragment
+import dmitry.mobilecourseunn.fragments.CalculatorDialogFragment
 
 class SampleDialogActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

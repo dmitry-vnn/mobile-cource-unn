@@ -34,7 +34,12 @@ class TodoListActivity : AppCompatActivity() {
             return
         }
 
-        todoList += text
+        var word = text.toLowerCase()
+        if (todoList.isEmpty()) {
+            word = word.replaceFirstChar { word.first().toUpperCase() }
+        }
+
+        todoList += word
     }
 
 
@@ -51,5 +56,5 @@ private fun String.isWord(): Boolean {
         }
     }
 
-    return true
+    return isNotEmpty()
 }

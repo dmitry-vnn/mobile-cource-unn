@@ -11,6 +11,8 @@ class TodoListModel(
         onTodoListChangeCallback(todoList)
     }
 
+    fun isEmpty() = todoList.isEmpty()
+
     fun removeLast() {
         todoList.removeLastOrNull()
         onTodoListChangeCallback(todoList)

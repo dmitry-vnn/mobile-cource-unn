@@ -25,12 +25,17 @@ class HouseView(context: Context, attributeSet: AttributeSet): View(context, att
     }
 
     private val housePaint = Paint().apply {
-        color = Color.RED
+        color = Color.rgb(229,87,101)
         style = Paint.Style.FILL
     }
 
     private val roofPaint = Paint().apply {
         color = Color.BLUE
+        style = Paint.Style.FILL
+    }
+
+    private val roofPipePaint = Paint().apply {
+        color = Color.rgb(145,80,8)
         style = Paint.Style.FILL
     }
 
@@ -73,7 +78,26 @@ class HouseView(context: Context, attributeSet: AttributeSet): View(context, att
             close() // Замыкаем путь, чтобы получить треугольник
         }
 
+        drawRoofPipe(baseLength, height, vertexX, vertexY, canvas)
+
         canvas.drawPath(roofPath, roofPaint) // Рисуем треугольник
+    }
+
+    private fun drawRoofPipe(
+        baseLength: Float, height: Float,
+        vertexX: Float, vertexY: Float, canvas: Canvas
+    ) {
+
+        val pipeLineStartX = baseLength / 4 + vertexX
+        val pipeLineEndY = vertexY + height
+
+        val pipeWidth = 100
+
+        canvas.drawRect(
+            pipeLineStartX - pipeWidth / 2, pipeLineEndY - height,
+            pipeLineStartX + pipeWidth / 2, pipeLineEndY,
+             roofPipePaint
+        )
     }
 
     private fun drawHouse(canvas: Canvas) {

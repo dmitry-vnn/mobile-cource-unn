@@ -9,12 +9,12 @@ import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 
-class ParticleView(context: Context, attrs: AttributeSet) : SurfaceView(context, attrs), SurfaceHolder.Callback, Runnable {
+class FountainView(context: Context, attrs: AttributeSet) : SurfaceView(context, attrs), SurfaceHolder.Callback, Runnable {
 
     private var thread: Thread? = null
     @Volatile
     private var running = false
-    private val particles = mutableListOf<Particle>()
+    private val fountains = mutableListOf<Fountain>()
     private val paint = Paint()
     private var emitterX: Float = 0f
     private var emitterY: Float = 0f
@@ -60,9 +60,9 @@ class ParticleView(context: Context, attrs: AttributeSet) : SurfaceView(context,
 
     private fun emitParticles() {
         if (emitParticles) {
-            synchronized(particles) {
+            synchronized(fountains) {
                 for (i in 0 until 5) {
-                    particles.add(Particle(emitterX, emitterY))
+                    fountains.add(Fountain(emitterX, emitterY))
                 }
             }
         }
@@ -76,8 +76,8 @@ class ParticleView(context: Context, attrs: AttributeSet) : SurfaceView(context,
 
                 emitParticles()
 
-                synchronized(particles) {
-                    val iterator = particles.iterator()
+                synchronized(fountains) {
+                    val iterator = fountains.iterator()
                     while (iterator.hasNext()) {
                         val particle = iterator.next()
                         if (particle.isAlive()) {
@@ -95,7 +95,7 @@ class ParticleView(context: Context, attrs: AttributeSet) : SurfaceView(context,
     }
 }
 
-class Particle(var x: Float, var y: Float) {
+class Fountain(var x: Float, var y: Float) {
     var vx: Float = (Math.random().toFloat() * 4 - 2)
     var vy: Float = (Math.random().toFloat() * 4 - 2)
     var lifetime: Int = 100

@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <dmitry.mobilecourse.fountain.ParticleView
+    <dmitry.mobilecourse.fountain.FountainView
         android:id="@+id/particleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:columnCount="2"
+        app:rowCount="1">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/first_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:columnCount="1"
+            app:layout_gravity="start">
+
+            <TextView
+                android:id="@+id/fp_health_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HP: 100%"
+                android:textSize="24sp"
+                app:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/first_player_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/second_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:columnCount="1"
+            app:layout_gravity="end">
+
+            <TextView
+                android:id="@+id/sp_health_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HP: 100%"
+                android:textSize="24sp"
+                app:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/second_player_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center" />
+        </androidx.gridlayout.widget.GridLayout>
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/switch_player_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSwitchButtonClick"
+        android:text="Switch"
+        android:layout_gravity="center" />
+
+</LinearLayout>
